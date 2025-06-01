@@ -40,7 +40,7 @@ const CheckoutPage = () => {
     };
 
     const sendEmail = () =>
-        fetch("http://localhost:5000/send-confirmation", {
+        fetch(`${import.meta.env.VITE_API_BASE}/send-confirmation`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
